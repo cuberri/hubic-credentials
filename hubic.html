@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+		<style>
+	      body {
+	        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+	      }
+	    </style>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+	      <div class="navbar-inner">
+	        <div class="container">
+	          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </a>
+	          <a class="brand" href="#">OVH WS - Hubic R3</a>
+	          <!-- <div class="nav-collapse collapse">
+	            <ul class="nav">
+	              <li class="active"><a href="#">Home</a></li>
+	              <li><a href="#about">About</a></li>
+	              <li><a href="#contact">Contact</a></li>
+	            </ul>
+	          </div> -->
+	        </div>
+	      </div>
+	    </div>
+
+	    <div class="container">
+	    	<div id="alerts">&nbsp;</div>
+		    <form class="form-inline">
+		    	<fieldset>
+		    		<legend>Login to Hubic to get your session id</legend>
+				    <input id="email" type="text" class="input" placeholder="Email / NIC Handle" />
+					<input id="password" type="password" class="input" placeholder="Password" />
+					<!-- <label class="checkbox">
+						<input type="checkbox">Remember me</input>
+					</label> -->
+					<button id="btnNasLogin" class="btn btn-small" type="button">Login</button>
+					<img id="imgAjaxLoaderLogin" src="img/ajax-loader.gif" />
+			    </fieldset>
+			    <fieldset>
+		    		<legend>Get your private url</legend>
+				    <input id="sessionId" type="text" class="input-xxlarge uneditable-input" placeholder="Session ID" />
+					<button id="btnGetNas" class="btn btn-small" type="button">Get URL</button>
+					<img id="imgAjaxLoaderGetNas" src="img/ajax-loader.gif" />
+					<div id="getPrivateUrlRes" />
+			    </fieldset>
+			    <fieldset>
+		    		<legend>Get your credentials</legend>
+				    <input id="accountName" type="text" class="input uneditable-input" placeholder="Account Name" />
+					<button id="btnGetCredentials" class="btn btn-small" type="button">Get Credentials</button>
+					<img id="imgAjaxLoaderGetCredentials" src="img/ajax-loader.gif" />
+					<div id="getCredentialsRes" />
+			    </fieldset>
+		    </form>
+	    	<div class="results">
+	    		<div id="result">&nbsp;</div>
+	    	</div>
+	    </div>
+
+		<script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/hubic.js"></script>
+		<script type="text/javascript" src="js/OWHWS-Wrapper-r3.js"></script>
+		<script type="text/javascript">
+			$(init())
+		</script>
+	</body>
+</html>
